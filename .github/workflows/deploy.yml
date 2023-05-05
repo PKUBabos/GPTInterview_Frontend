@@ -13,6 +13,8 @@ jobs:
           node-version: "16.x"
       - run: yarn install --frozen-lockfile
       - run: yarn build
+        env:
+          REACT_APP_CHATGPT_API: ${{ secrets.API_KEY }}
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:

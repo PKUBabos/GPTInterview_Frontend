@@ -1,4 +1,4 @@
 .homePage {
-  height: 1080px;
-  /*전체 화면 채우기 위한 임의의 값*/
+  /*헤더 Navbar가 64px, 이에 맞춰 계산*/
+  height: calc(100vh - 64px);
 }

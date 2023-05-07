@@ -1,9 +1,18 @@
+import { Editor } from '@toast-ui/react-editor';
+import '@toast-ui/editor/dist/toastui-editor.css';
 import './MarkDown.css';
 
 export function MarkDown() {
   return (
     <div className="markDown">
-      마크 다운 에디터 기능 칸
+      <Editor
+        placeholder="请输入内容"
+        previewStyle="tab"
+        height="100%"
+        hideModeSwitch={true}
+        autofocus={false}
+        toolbarItems={[]}
+      ></Editor>
     </div>
   );
 }

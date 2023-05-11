@@ -9,6 +9,7 @@ export function MarkDown() {
         placeholder="请输入内容"
         previewStyle="tab"
         height="100%"
+        initialValue="..."
         hideModeSwitch={true}
         autofocus={false}
         toolbarItems={[]}

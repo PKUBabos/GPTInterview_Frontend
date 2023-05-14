@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { message } from 'antd';
 import LogicFlow from '@logicflow/core';
 import NodePanel from './Components/NodePanel';
@@ -16,7 +16,7 @@ const config = {
 
 export function MindMap() {
   const [lf, setLf] = useState({} as LogicFlow);
-  const [nodeData, setNodeData] = useState();
+  const [_, setNodeData] = useState();
 
   useEffect(() => {
     const lf = new LogicFlow({
@@ -38,19 +38,6 @@ export function MindMap() {
     });
   }
 
-  const updateProperty = (id: string, data: any) => {
-    const node = lf.graphModel.nodesMap[id];
-    const edge = lf.graphModel.edgesMap[id];
-    if (node) {
-      node.model.setProperties(Object.assign(node.model.properties, data));
-    } else if (edge) {
-      edge.model.setProperties(Object.assign(edge.model.properties, data));
-    }
-  }
-
-  const hidePropertyPanel = () => {
-    setNodeData(undefined);
-  }
   return (
     <div className="approve-example-container">
       <div className="node-panel">

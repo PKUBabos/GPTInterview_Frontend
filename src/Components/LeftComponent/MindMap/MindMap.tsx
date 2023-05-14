@@ -16,7 +16,7 @@ const config = {
 
 export function MindMap() {
   const [lf, setLf] = useState({} as LogicFlow);
-  const [_, setNodeData] = useState();
+  const setNodeData = useState()[1];
 
   useEffect(() => {
     const lf = new LogicFlow({

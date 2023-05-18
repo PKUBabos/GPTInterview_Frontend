@@ -4,7 +4,7 @@ import LogicFlow from '@logicflow/core';
 import NodePanel from './Components/NodePanel';
 import RegisteNode from './Components/registerNode';
 import { themeApprove, data } from './config';
-import './index.css';
+import './MindMap.css';
 
 const config = {
   stopScrollGraph: false,
@@ -27,6 +27,9 @@ export function MindMap() {
     RegisteNode(lf);
     lf.render(data);
     initEvent(lf);
+    var width = window.screen.width * 0.3;
+    var height = window.screen.height * 0.5 - 100;
+    lf.resize(width, height);
   }, []);
   const initEvent = (lf: LogicFlow) => {
     lf.on('element:click', ({ data }) => {
@@ -38,8 +41,14 @@ export function MindMap() {
     });
   }
 
+  window.addEventListener(`resize`, function () {
+    // var width = window.screen.width * 0.3;
+    // var height = window.screen.height * 0.5 - 200;
+    // lf.resize(undefined, height);
+  });
+
   return (
-    <div className="approve-example-container">
+    <div className="container">
       <div className="node-panel">
         {NodePanel(lf)}
       </div>

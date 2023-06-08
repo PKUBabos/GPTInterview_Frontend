@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/GPTInterview_Frontend/static/css/main.67685b1a.css",
+    "main.js": "/GPTInterview_Frontend/static/js/main.00903aac.js",
+    "static/js/787.83e6525a.chunk.js": "/GPTInterview_Frontend/static/js/787.83e6525a.chunk.js",
+    "static/media/index.cjs": "/GPTInterview_Frontend/static/media/index.c05687ef19f5bac24939.cjs",
+    "index.html": "/GPTInterview_Frontend/index.html",
+    "main.67685b1a.css.map": "/GPTInterview_Frontend/static/css/main.67685b1a.css.map",
+    "main.00903aac.js.map": "/GPTInterview_Frontend/static/js/main.00903aac.js.map",
+    "787.83e6525a.chunk.js.map": "/GPTInterview_Frontend/static/js/787.83e6525a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67685b1a.css",
+    "static/js/main.00903aac.js"
+  ]
+}

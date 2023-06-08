@@ -3,3 +3,77 @@
   width: 30%;
   height: 100%;
 }
+
+#btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mind-map-btn {
+  margin: 20px;
+  width: 40%;
+  position: relative;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+  background-color: aliceblue;
+  color: #1e6b7b;
+}
+
+.mind-map-btn:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.mind-map-btn:active {
+  transform: scale(1.5);
+}
+
+@keyframes gradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient2 {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}

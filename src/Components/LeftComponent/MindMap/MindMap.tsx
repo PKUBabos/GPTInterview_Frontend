@@ -14,26 +14,31 @@ const config = {
   style: themeApprove,
 }
 
-export function MindMap() {
-  const [lf, setLf] = useState({} as LogicFlow);
-  const setNodeData = useState()[1];
+interface MindMapProps {
+  lf: LogicFlow;
+  setLf(lf: LogicFlow): void;
+  setNodeData: React.Dispatch<React.SetStateAction<undefined>>;
+}
 
+export function MindMap(props: MindMapProps) {
   useEffect(() => {
     const lf = new LogicFlow({
       ...config,
       container: document.querySelector('#graph') as HTMLElement
     });
-    setLf(lf);
+    props.setLf(lf);
     RegisteNode(lf);
     lf.render(data);
     initEvent(lf);
-    var width = window.screen.width * 0.3;
-    var height = window.screen.height * 0.5 - 100;
+    // var width = window.screen.width * 0.3;
+    // var height = window.screen.height * 0.5 - 100;
+    var width = window.screen.width;
+    var height = window.screen.height * 0.7;
     lf.resize(width, height);
   }, []);
   const initEvent = (lf: LogicFlow) => {
     lf.on('element:click', ({ data }) => {
-      setNodeData(data);
+      props.setNodeData(data);
       console.log(JSON.stringify(lf.getGraphData()));
     });
     lf.on('connection:not-allowed', (data: any) => {
@@ -50,7 +55,7 @@ export function MindMap() {
   return (
     <div className="container">
       <div className="node-panel">
-        {NodePanel(lf)}
+        {NodePanel(props.lf)}
       </div>
       <div id="graph" className="viewport" />
     </div>

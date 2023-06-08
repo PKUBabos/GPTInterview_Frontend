@@ -2,10 +2,14 @@ import LeftComponent from './LeftComponent/LeftComponent';
 import RightComponent from './RightComponent/RightComponent';
 import './HomePage.css';
 
-export function HomePage() {
+interface HomePageProps {
+  onClick(): void
+}
+
+export function HomePage(props: HomePageProps) {
   return (
     <div className="homePage">
-      <LeftComponent />
+      <LeftComponent buttonOnClick={props.onClick} />
       <RightComponent />
     </div>
   );
